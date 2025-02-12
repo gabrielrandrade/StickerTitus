@@ -11,7 +11,7 @@ export default function Index() {
         <ImageViewer imgSource={PlacehoderImage} />
       </View>
       <View style={styles.footerContainer}>
-        <Button label="Choose a photo" />
+        <Button label="Choose a photo" theme="primary" />
         <Button label="Use this photo" />
       </View>
     </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    paddingTop: 28,
+    paddingTop: 8,
   },
   footerContainer: {
     flex: 1 / 3,// é um terço da pagina
