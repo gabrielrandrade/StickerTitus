@@ -21,6 +21,7 @@ export default function Index() {
 
     if (!result.canceled) {
       setSelectedImage(result.assets[0].uri);
+      setShowAppOptions(true);
     } else {
       alert("Você não selecionou nenhuma imagem");
     }

@@ -1,13 +1,13 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { StyleSheet, View, Pressable, Text } from "react-native";
 //Nome probs é opcional poderia ser ButtonProbs
-type Probs = {
+type Props = {
   label: string;
   theme?: "primary"; // ? para sinalizar que a prob é opcional
   onPress?: () => void; // recebendo função
 };
 
-export default function Button({ label, theme, onPress }: Probs) {
+export default function Button({ label, theme, onPress }: Props) {
   if (theme === "primary") {
     return (
       <View
