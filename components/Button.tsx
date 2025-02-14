@@ -36,7 +36,7 @@ export default function Button({ label, theme, onPress }: Probs) {
 
   return (
     <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert("clicou")}>
+      <Pressable style={styles.button} onPress={onPress}>
         <Text style={styles.buttonLabel}>{label}</Text>
       </Pressable>
     </View>
