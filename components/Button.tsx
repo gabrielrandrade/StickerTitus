@@ -4,9 +4,10 @@ import { StyleSheet, View, Pressable, Text } from "react-native";
 type Probs = {
   label: string;
   theme?: "primary"; // ? para sinalizar que a prob é opcional
+  onPress?: () => void; // recebendo função
 };
 
-export default function Button({ label, theme }: Probs) {
+export default function Button({ label, theme, onPress }: Probs) {
   if (theme === "primary") {
     return (
       <View
@@ -17,7 +18,7 @@ export default function Button({ label, theme }: Probs) {
       >
         <Pressable
           style={[styles.button, { backgroundColor: "#FFF" }]}
-          onPress={() => alert("Você clicou aqui")}
+          onPress={onPress} // recebendo a probs onPress
         >
           <FontAwesome
             name="picture-o"
